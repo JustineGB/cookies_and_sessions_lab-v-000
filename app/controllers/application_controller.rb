@@ -7,6 +7,6 @@ class ApplicationController < ActionController::Base
   def cart
     #binding.pry
     session[:cart] ||= []
- end 
+  end 
 
 end
