@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1>Products Index Page</h1>
 
 <!--<ul>
@@ -21,3 +22,26 @@
 <%= text_field_tag :product %>
 <%= submit_tag "add to cart" %>
 <% end %>
+=======
+<h1>Index Page</h1>
+
+<h2>All Products:</h2>
+ <ul><% @products.each do |product| %>
+    <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+</ul>
+
+<%= params.inspect %><br>
+
+<%= session.id %><br>
+
+<p>Cart: <%= session[:cart] %></p>
+
+<%#= form_for @products do |f| %>
+  <%#= f.label :products %>
+  <%#= f.text_field :products %>
+  <%#= f.hidden_field :product_id, value: product.id %>
+  <%#= f.submit "add to cart" %>
+<%# end %>
+  
+>>>>>>> b5b9ce0061afec4d5cbf9b9fc0696a20a5f44dcd
